@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'dashboard', 'title' => 'Light Bootstrap Dashboard Laravel by Creative Tim & UPDIVISION', 'navName' => 'Dashboard', 'activeButton' => 'laravel'])
+@extends('layouts.app', ['activePage' => 'dashboard', 'title' => 'ANKA | Home', 'navName' => 'Welcome to ANKA', 'activeButton' => 'laravel'])
 
 @section('content')
     <div class="content">
@@ -7,8 +7,8 @@
                 <div class="col-md-4">
                     <div class="card ">
                         <div class="card-header ">
-                            <h4 class="card-title">{{ __('Email Statistics') }}</h4>
-                            <p class="card-category">{{ __('Last Campaign Performance') }}</p>
+                            <h4 class="card-title">{{ __('New Users') }}</h4>
+                            <p class="card-category">{{ __('Registration Performance') }}</p>
                         </div>
                         <div class="card-body ">
                             <div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div>
