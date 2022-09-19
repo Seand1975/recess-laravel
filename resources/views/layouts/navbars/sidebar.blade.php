@@ -28,7 +28,7 @@ Tip 2: you can also add an image using data-image tag
                         <b class="caret"></b>
                     </p>
                 </a>
-                <div class="collapse @if($activeButton =='laravel') show @endif" id="laravelExamples">
+                <div class="collapse @if($activeButton =='laravel' && $activePage==('user'||'user-management')) show @endif" id="laravelExamples">
                     <ul class="nav">
                         <li class="nav-item @if($activePage == 'user') active @endif">
                             <a class="nav-link" href="{{route('profile.edit')}}">
