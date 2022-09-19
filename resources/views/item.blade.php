@@ -3,11 +3,7 @@ $item = $_GET['item'];
 $before = FALSE;
 @endphp
 
-@extends('layout.app')
-
-@section('title')
-<?= $item ?> | ANKA
-@endsection
+@extends('layout.app',['title'=>'<?= $item ?> | ANKA'])
 
 <?php
 if(isset($_COOKIE["before"])){

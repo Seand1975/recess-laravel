@@ -1,13 +1,9 @@
 @php
 $search = $_GET["searchtext"];
-$list = [$search.' bags', $search.' phones', $search.'iser', $search.'iosis'];
+$list = [$search.' bags', $search.' phones', $search.' watches', $search.' books'];
 @endphp
 
-@extends('layout.app')
-
-@section('title')
-<?= $search ?> | ANKA
-@endsection
+@extends('layout.app',['title'=>'<?= $search ?> | ANKA'])
 
 @section('content')
 <div class="lato bigt tbmargin">You searced for "<?= $search;?>"</div>
@@ -20,15 +16,16 @@ $list = [$search.' bags', $search.' phones', $search.'iser', $search.'iosis'];
     </tr>
   </thead>
   <tbody class="tinyt2">
-  <?php foreach($list as $l){ ?>
+    
+  @foreach ($list as $l)
     <tr class="qsand" style="border-style: solid;border-width: 2px;border-radius: 5px;">
-      <td style="text-decoration: underline;">
-        <a href="{{route('item')}}?item=<?=$l?>"><?= $l ?></a>
-      </td>
-      <td><?= $l ?> to be bought.</td>
-      <td>Available</td>
-    </tr>
-  <?php } ?>
+     <td style="text-decoration: underline;">
+       <a href="{{route('item')}}?item=<?=$l?>"><?= $l ?></a>
+     </td>
+     <td><?= $l ?> to be bought.</td>
+     <td>Available</td>
+    </tr> 
+  @endforeach
   </tbody>
 </table>
 @endsection

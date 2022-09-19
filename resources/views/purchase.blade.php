@@ -7,11 +7,7 @@ $unitp = $_GET['unitp'];
 $total= ($qty*$unitp) + 1;
 @endphp
 
-@extends('layout.app')
-
-@section('title')
-Purchase of <?=$item?> | ANKA
-@endsection
+@extends('layout.app',['title'=>'Purchase of <?=$item?> | ANKA'])
 
 @section('content')
 <div class="lato bigt tbmargin">You have purchased the item, "<?=$item?>" !</div>

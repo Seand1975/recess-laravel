@@ -1,8 +1,4 @@
-@extends('layout.app')
-
-@section('title')
-ANKA | Home
-@endsection
+@extends('layout.app',['title'=>'ANKA | Home'])
 
 @section('content')
 

@@ -1,8 +1,4 @@
-@extends('layout.app')
-
-@section('title')
-404muk | ANKA
-@endsection
+@extends('layout.app',['title'=>'404muk | ANKA'])
 
 @section('content')
 <div class="lato bigt tbmargin">Profile</div>

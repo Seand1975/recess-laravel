@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>@yield('title')</title>
+<title>{{$title}}</title>
 @include('head')
 </head>
 
