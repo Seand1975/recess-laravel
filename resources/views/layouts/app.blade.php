@@ -37,7 +37,6 @@
 
             @if (auth()->check() && request()->route()->getName() != "")
                 @include('layouts.navbars.sidebar')
-                @include('pages/sidebarstyle')
             @endif
 
             <div class="@if (auth()->check() && request()->route()->getName() != "") main-panel @endif">
