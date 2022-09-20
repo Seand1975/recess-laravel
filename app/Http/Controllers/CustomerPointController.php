@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class CustomerPointController extends Controller
 {
-    public function addPoint(point)
+    public function addPoint ("point")
     {
         customer_point = 0;
         customer_point += point;
