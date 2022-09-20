@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('Customer Points', function (Blueprint $table) {
+        Schema::create('customer_points', function (Blueprint $table) {
             $table->integer('number_of_points');
             $table->increments('id');
             $table->foreignId('product_booking_id');

@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('Product Booking', function (Blueprint $table) {
+        Schema::create('product_ooking', function (Blueprint $table) {
             $table->foreignId('product_id');
             $table->foreignId('customer_id');
             $table->increments('id');
