@@ -19,7 +19,6 @@ return new class extends Migration
             $table->increments('id');
             $table->string('delivery_address');
             $table->integer('quantity_booked');
-            $table->string('delivery_address');
         });
     }
 
