@@ -8,7 +8,7 @@ $s = "";
     }
 @endphp
 
-@include('dani')
+@include('pages.dani')
 
 @section('content')
     <form class="bg-white" action="{{route('search')}}" method="GET">
