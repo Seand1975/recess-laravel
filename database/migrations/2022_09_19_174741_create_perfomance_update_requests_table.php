@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('perfomance_update_request', function (Blueprint $table){
+        Schema::create('perfomance_update_requests', function (Blueprint $table){
             $table->increments('id');
             $table->foreignId('user_id');
             $table->dateTime('request_time');
