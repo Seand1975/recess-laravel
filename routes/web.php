@@ -42,7 +42,7 @@ Auth::routes();
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Auth::routes();
 
-Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('search');
+Route::get('/search', 'App\Http\Controllers\HomeController@index')->name('search');
 Route::get('/dashboard', 'App\Http\Controllers\HomeController@dash')->name('dashboard');
 
 Route::group(['middleware' => 'auth'], function () {

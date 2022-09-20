@@ -12,9 +12,9 @@ Tip 2: you can also add an image using data-image tag
         </div>
         <ul class="nav">
             <li class="nav-item @if($activePage == 'search') active @endif">
-                <a class="nav-link" href="{{route('search')}}">
-                    <i class="nc-icon nc-zoom-split"></i>
-                    <p>{{ __("Search") }}</p>
+                <a class="nav-link" href="{{route('home')}}">
+                    <i class="nc-icon nc-quote"></i>
+                    <p>{{ __("Home") }}</p>
                 </a>
             </li>
            

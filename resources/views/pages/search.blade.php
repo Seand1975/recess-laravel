@@ -22,9 +22,6 @@ $s = "";
 </script>
 
 <style>
-body{
-  background-color: #14213d77;
-}
 @keyframes inp {
   0% {
     width: 0%;
@@ -37,7 +34,7 @@ body{
 }
 @keyframes posn {
   0%{
-    left:45%;
+    left:40%;
     background-color: white;
     color:black;
     transform: rotate(45deg);
@@ -49,8 +46,8 @@ body{
     transform: rotate(20deg);
   }
   100%{
-    left:85%;
-    background-color: #14213d;
+    left:4%;
+    background-color: #0006;
     color:white;
   }
 }
@@ -63,23 +60,23 @@ body{
 }
 .inp{
   animation: inp 1s;
-  animation-delay: 0.5s;
+  animation-delay: 0.25s;
   animation-fill-mode: forwards;
 }
 button#clk{
   transform: rotate(45deg);
   width: 60px;
   height: 60px;
-  position: absolute;
-  top: 6vh;
-  left: 45%;
+  position: relative;
+  top: 3%;
+  left: 40%;
   margin-left: 10px;
   background-attachment: fixed;
   font-weight: bolder;
 }
 .move{
  animation: posn 1s;
- animation-delay: 0.5s;
+ animation-delay: 0.25s;
  animation-fill-mode: forwards;
 }
 div.holder{
@@ -95,12 +92,12 @@ div#rev{
 </style>
 
 @section('content')
-    <div class="holder">
-        <input class="search" type="text" id="text" value="">
+    <form action="{{route('search')}}" method="GET"><div class="holder">
+        <input class="search" type="text" id="text" name="text">
         <button id="clk" type="submit" onmouseover="show()">
-            <div id="rev">Search</div>
+            <div id="rev"><i class="nc-icon nc-zoom-split"></i></div>
         </button>
-    </div>
+    </div></form>
 
     <div class="content">
         <div class="container-fluid">
@@ -109,7 +106,7 @@ div#rev{
                     
                 @endphp
                 <div class="row">
-                    
+                    hi
                 </div>
             @endif
         </div>
