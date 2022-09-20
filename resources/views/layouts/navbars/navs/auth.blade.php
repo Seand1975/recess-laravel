@@ -50,9 +50,9 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                    <form class="align-items-center justify-content-center" id="logout-form" action="{{ route('logout') }}" method="POST">
                         @csrf
-                        <a class="border border-red text-white rounded-3 p-1 bg-danger" href="{{ route('home') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> {{ __('Log Out') }} </a>
+                        <a class="border border-warning text-danger rounded p-2 bg-white" href="{{ route('home') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="nc-icon nc-button-power"></i> {{ __('Log Out') }} </a>
                     </form>
                 </li>
             </ul>

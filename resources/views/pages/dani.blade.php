@@ -48,7 +48,8 @@
   font-size: 30px;
   text-indent: 20px;
   border-radius: 4px;
-  box-shadow: 0px 0px 4px #a7bacf;
+  border-width: 0px;
+  box-shadow: 0px 0px 6px #506070;
   visibility: hidden;
 }
 .inp{
