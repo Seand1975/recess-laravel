@@ -82,7 +82,7 @@ button#clk{
 div.holder{
   align-items: center;
   display: flex;
-  width: 100%;
+  width: 95%;
   margin-top: 6vh;
   margin-left: 3vw;
 }
