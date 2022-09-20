@@ -47,7 +47,7 @@ $s = "";
   }
   100%{
     left:4%;
-    background-color: #0006;
+    background-color: #343a40;
     color:white;
   }
 }
