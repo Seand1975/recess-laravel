@@ -23,6 +23,15 @@ class HomeController extends Controller
      */
     public function index()
     {
+        return view('pages.search');
+    }
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function dash()
+    {
         return view('dashboard');
     }
 }

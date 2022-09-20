@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'dashboard', 'title' => 'ANKA | Home', 'navName' => 'Welcome to ANKA', 'activeButton' => 'laravel'])
+@extends('layouts.app', ['activePage' => 'dashboard', 'title' => 'ANKA | Admin', 'navName' => 'Admin Dashboard', 'activeButton' => 'dashboard'])
 
 @section('content')
     <div class="content">
@@ -51,7 +51,7 @@
                 <div class="col-md-6">
                     <div class="card ">
                         <div class="card-header ">
-                            <h4 class="card-title">{{ __('2017 Sales') }}</h4>
+                            <h4 class="card-title">{{ __('2021 Sales') }}</h4>
                             <p class="card-category">{{ __('All products including Taxes') }}</p>
                         </div>
                         <div class="card-body ">
@@ -59,8 +59,8 @@
                         </div>
                         <div class="card-footer ">
                             <div class="legend">
-                                <i class="fa fa-circle text-info"></i> {{ __('Tesla Model S') }}
-                                <i class="fa fa-circle text-danger"></i> {{ __('BMW 5 Series') }}
+                                <i class="fa fa-circle text-info"></i> {{ __('Participant Products') }}
+                                <i class="fa fa-circle text-danger"></i> {{ __('Other ANKA Products') }}
                             </div>
                             <hr>
                             <div class="stats">
@@ -217,7 +217,7 @@
             // Javascript method's body can be found in assets/js/demos.js
             demo.initDashboardPageCharts();
 
-            demo.showNotification();
+            //demo.showNotification();
 
         });
     </script>

@@ -1,4 +1,4 @@
-<div class="sidebar" data-color="red">
+<div class="sidebar" data-color="azure">
     <!--
 Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
 
@@ -11,8 +11,8 @@ Tip 2: you can also add an image using data-image tag
             </a>
         </div>
         <ul class="nav">
-            <li class="nav-item @if($activePage == 'dashboard') active @endif">
-                <a class="nav-link" href="{{route('dashboard')}}">
+            <li class="nav-item @if($activePage == 'search') active @endif">
+                <a class="nav-link" href="{{route('search')}}">
                     <i class="nc-icon nc-zoom-split"></i>
                     <p>{{ __("Search") }}</p>
                 </a>
@@ -24,8 +24,8 @@ Tip 2: you can also add an image using data-image tag
                     <p>{{ __("User Profile") }}</p>
                 </a>
             </li>
-            <li class="nav-item @if($activePage == 'user-management') active @endif">
-                <a class="nav-link" href="{{route('user.index')}}">
+            <li class="nav-item @if($activePage == 'dashboard') active @endif">
+                <a class="nav-link" href="{{route('dashboard')}}">
                     <i class="nc-icon nc-chart-pie-36"></i>
                     <p>{{ __("Admin Dashboard") }}</p>
                 </a>
