@@ -42,11 +42,13 @@
   }
 }
 .search{
+  margin: 10px;
   width: 2%;
   height: 50px;
   font-size: 30px;
   text-indent: 20px;
   border-radius: 4px;
+  box-shadow: 0px 0px 4px #a7bacf;
   visibility: hidden;
 }
 .inp{
@@ -64,6 +66,7 @@ button#clk{
   margin-left: 10px;
   background-attachment: fixed;
   font-weight: bolder;
+  box-shadow: 0px 0px 8px #14213d;
 }
 .move{
  animation: posn 1s;
@@ -88,6 +91,7 @@ div#rev{
   height: 560px;
   background-color: #a7bacf;
   border-radius: 21px;
+  box-shadow: 9px 7px #101e30;
   z-index: -1;
 }
 .product-device::before {
@@ -96,7 +100,7 @@ div#rev{
   right: 10px;
   bottom: 10%;
   left: 10px;
-  content: "";
+  content: "©";
   background-color: rgba(255, 255, 255, .1);
   border-radius: 5px;
 }
