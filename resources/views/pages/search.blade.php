@@ -92,12 +92,14 @@ div#rev{
 </style>
 
 @section('content')
-    <form action="{{route('search')}}" method="GET"><div class="holder">
+    <form action="{{route('search')}}" method="GET">
+      <div class="holder">
         <input class="search" type="text" id="text" name="text">
         <button id="clk" type="submit" onmouseover="show()">
             <div id="rev"><i class="nc-icon nc-zoom-split"></i></div>
         </button>
-    </div></form>
+      </div>
+    </form>
 
     <div class="content">
         <div class="container-fluid">
