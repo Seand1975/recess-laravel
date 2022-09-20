@@ -1,136 +1,117 @@
 @extends('layouts.app', ['activePage' => 'search', 'title' => 'ANKA | Home', 'navName' => 'Welcome to ANKA', 'activeButton' => 'laravel'])
+@php
+$s = "";
+    try {
+        $s = $_GET['text'];
+    } catch (\Throwable $th) {
+        $s="";
+    }
+@endphp
+
+<script type="text/javascript">
+    let hov = false;
+    function show() {
+        if (!hov) {
+            let input = document.getElementById('text');
+            let btn = document.getElementById('clk');
+            input.className += " inp";
+            btn.className += " move";
+            hov = true;
+        }
+    }
+</script>
+
+<style>
+body{
+  background-color: #14213d77;
+}
+@keyframes inp {
+  0% {
+    width: 0%;
+    visibility: hidden;
+  }
+  100% {
+    width: 80%;
+    visibility: visible;
+  }
+}
+@keyframes posn {
+  0%{
+    left:45%;
+    background-color: white;
+    color:black;
+    transform: rotate(45deg);
+  }
+  33%{
+    transform: rotate(70deg);
+  }
+  67%{
+    transform: rotate(20deg);
+  }
+  100%{
+    left:85%;
+    background-color: #14213d;
+    color:white;
+  }
+}
+.search{
+  width: 2%;
+  height: 50px;
+  font-size: 30px;
+  text-indent: 20px;
+  visibility: hidden;
+}
+.inp{
+  animation: inp 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+button#clk{
+  transform: rotate(45deg);
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 6vh;
+  left: 45%;
+  margin-left: 10px;
+  background-attachment: fixed;
+  font-weight: bolder;
+}
+.move{
+ animation: posn 1s;
+ animation-delay: 0.5s;
+ animation-fill-mode: forwards;
+}
+div.holder{
+  align-items: center;
+  display: flex;
+  width: 100%;
+  margin-top: 6vh;
+  margin-left: 3vw;
+}
+div#rev{
+  transform: rotate(-45deg);
+}
+</style>
 
 @section('content')
+    <div class="holder">
+        <input class="search" type="text" id="text" value="">
+        <button id="clk" type="submit" onmouseover="show()">
+            <div id="rev">Search</div>
+        </button>
+    </div>
+
     <div class="content">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card strpied-tabled-with-hover">
-                        <div class="card-header ">
-                            <h4 class="card-title">Striped Table with Hover</h4>
-                            <p class="card-category">Here is a subtitle for this table</p>
-                        </div>
-                        <div class="card-body table-full-width table-responsive">
-                            <table class="table table-hover table-striped">
-                                <thead>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>Salary</th>
-                                    <th>Country</th>
-                                    <th>City</th>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Dakota Rice</td>
-                                        <td>$36,738</td>
-                                        <td>Niger</td>
-                                        <td>Oud-Turnhout</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Minerva Hooper</td>
-                                        <td>$23,789</td>
-                                        <td>Curaçao</td>
-                                        <td>Sinaai-Waas</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Sage Rodriguez</td>
-                                        <td>$56,142</td>
-                                        <td>Netherlands</td>
-                                        <td>Baileux</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>Philip Chaney</td>
-                                        <td>$38,735</td>
-                                        <td>Korea, South</td>
-                                        <td>Overland Park</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>Doris Greene</td>
-                                        <td>$63,542</td>
-                                        <td>Malawi</td>
-                                        <td>Feldkirchen in Kärnten</td>
-                                    </tr>
-                                    <tr>
-                                        <td>6</td>
-                                        <td>Mason Porter</td>
-                                        <td>$78,615</td>
-                                        <td>Chile</td>
-                                        <td>Gloucester</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+            @if ($s != "")
+                @php
+                    
+                @endphp
+                <div class="row">
+                    
                 </div>
-                <div class="col-md-12">
-                    <div class="card card-plain table-plain-bg">
-                        <div class="card-header ">
-                            <h4 class="card-title">Table on Plain Background</h4>
-                            <p class="card-category">Here is a subtitle for this table</p>
-                        </div>
-                        <div class="card-body table-full-width table-responsive">
-                            <table class="table table-hover">
-                                <thead>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>Salary</th>
-                                    <th>Country</th>
-                                    <th>City</th>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Dakota Rice</td>
-                                        <td>$36,738</td>
-                                        <td>Niger</td>
-                                        <td>Oud-Turnhout</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Minerva Hooper</td>
-                                        <td>$23,789</td>
-                                        <td>Curaçao</td>
-                                        <td>Sinaai-Waas</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Sage Rodriguez</td>
-                                        <td>$56,142</td>
-                                        <td>Netherlands</td>
-                                        <td>Baileux</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>Philip Chaney</td>
-                                        <td>$38,735</td>
-                                        <td>Korea, South</td>
-                                        <td>Overland Park</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>Doris Greene</td>
-                                        <td>$63,542</td>
-                                        <td>Malawi</td>
-                                        <td>Feldkirchen in Kärnten</td>
-                                    </tr>
-                                    <tr>
-                                        <td>6</td>
-                                        <td>Mason Porter</td>
-                                        <td>$78,615</td>
-                                        <td>Chile</td>
-                                        <td>Gloucester</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endif
         </div>
     </div>
 @endsection
