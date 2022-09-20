@@ -23,17 +23,12 @@
                     <ul class="dropdown-menu">
                         <a class="dropdown-item" href="#">{{ __('Notification 1') }}</a>
                         <a class="dropdown-item" href="#">{{ __('Notification 2') }}</a>
-                        <a class="dropdown-item" href="#">{{ __('Notification 3') }}3</a>
+                        <a class="dropdown-item" href="#">{{ __('Notification 3') }}</a>
                         <a class="dropdown-item" href="#">{{ __('Notification 4') }}</a>
                         <a class="dropdown-item" href="#">{{ __('Another notification') }}</a>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nc-icon nc-zoom-split"></i>
-                        <span class="d-lg-block">&nbsp;{{ __('Search') }}</span>
-                    </a>
-                </li>
+                
             </ul>
             <ul class="navbar-nav   d-flex align-items-center">
                 <li class="nav-item">
@@ -57,7 +52,7 @@
                 <li class="nav-item">
                     <form id="logout-form" action="{{ route('logout') }}" method="POST">
                         @csrf
-                        <a class="text-danger" href="{{ route('home') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> {{ __('Log Out') }} </a>
+                        <a class="border border-red text-white rounded-3 p-1 bg-danger" href="{{ route('home') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> {{ __('Log Out') }} </a>
                     </form>
                 </li>
             </ul>
