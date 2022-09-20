@@ -30,7 +30,14 @@ Tip 2: you can also add an image using data-image tag
                     <p>{{ __("Admin Dashboard") }}</p>
                 </a>
             </li>
-
+            
+            <li class="nav-item @if($activePage == 'maps') active @endif">
+                <a class="nav-link" href="{{route('page.index', 'maps')}}">
+                    <i class="nc-icon nc-pin-3"></i>
+                    <p>{{ __("Maps") }}</p>
+                </a>
+            </li>
+            
             <li class="nav-item @if($activePage == 'typography') active @endif">
                 <a class="nav-link" href="{{route('page.index', 'typography')}}">
                     <i class="nc-icon nc-paper-2"></i>
@@ -41,12 +48,6 @@ Tip 2: you can also add an image using data-image tag
                 <a class="nav-link" href="{{route('page.index', 'icons')}}">
                     <i class="nc-icon nc-atom"></i>
                     <p>{{ __("Icons") }}</p>
-                </a>
-            </li>
-            <li class="nav-item @if($activePage == 'maps') active @endif">
-                <a class="nav-link" href="{{route('page.index', 'maps')}}">
-                    <i class="nc-icon nc-pin-3"></i>
-                    <p>{{ __("Maps") }}</p>
                 </a>
             </li>
             <li class="nav-item @if($activePage == 'notifications') active @endif">
