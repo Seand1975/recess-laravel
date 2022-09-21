@@ -15,11 +15,12 @@ return new class extends Migration
     {
         Schema::create('perfomance_update_requests', function (Blueprint $table){
             $table->increments('id');
-            $table->foreignId('user_id');
-            $table->dateTime('request_time');
+            $table->string('name');
             $table->string('request_answer');
+            $table->dateTime('request_time');
             $table->dateTime('request_response_time');
             $table->dateTime('request_response_seen');
+            $table->foreign('name')->references('name')->on('participants');
         });
     }
 

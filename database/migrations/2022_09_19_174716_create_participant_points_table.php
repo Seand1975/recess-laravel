@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('customer_points', function (Blueprint $table) {
-            $table->integer('number_of_points');
+        Schema::create('participant_points', function (Blueprint $table) {
             $table->increments('id');
-            $table->foreignId('product_booking_id');
-            $table->mediumText('reason_for_award');
+            $table->string('name');
+            $table->integer('number_of_points');
+            $table->foreign('name')->references('name')->on('participants');
         });
     }
 
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('customer_points');
+        Schema::dropIfExists('participant_points');
     }
 };

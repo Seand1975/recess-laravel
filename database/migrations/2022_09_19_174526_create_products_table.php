@@ -16,10 +16,11 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
             $table->string('product_name');
-            $table->mediumText('product_description');
-            $table->mediumText('available_quantity');
-            $table->mediumText('rate_per_item');
-            $table->foreignId('posted_by');
+            $table->string('product_description');
+            $table->integer('available_quantity');
+            $table->integer('rate_per_item');
+            $table->string('posted_by');
+            $table->foreign('posted_by')->references('name')->on('participants');
         });
     }
 
