@@ -16,9 +16,10 @@ return new class extends Migration
         Schema::create('product_bookings', function (Blueprint $table) {
             $table->increments('booking_id');
             $table->foreignId('name')->constrained('users');
-            $table->foreignId('product_name')->references('product_name')->on('products');//creates an error
             $table->string('delivery_address');
             $table->integer('quantity_booked');
+            $table->string('product_name');
+            $table->foreign('product_name')->references('product_name')->on('products');
         });
     }
 
