@@ -114,4 +114,28 @@ div#rev{
   background-color: #14213d;
 }
 .my-5{z-index: 1;}
+
+.item{
+  box-shadow: 2px 4px 2px #343a40;
+  height:auto;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+#prodname{
+  font-variant: small-caps;
+  background-color: #101e30;
+  color: white;
+}
+#desc{
+  background-color:#a7bacf;
+  color: white;
+}
+#participant{
+  background-color: #343a40;
+  color: white;
+}
+div.item>div.col{
+  height: inherit;
+  align-content: center;
+}
 </style>

@@ -31,11 +31,11 @@ Tip 2: you can also add an image using data-image tag
                 </a>
             </li>
             
-            <li class="nav-item @if($activePage == 'maps') active @endif">
-                <a class="nav-link" href="{{route('page.index', 'maps')}}">
-                    <i class="nc-icon nc-pin-3"></i>
-                    <p>{{ __("Maps") }}</p>
-                </a>
+            <li class="nav-item @if($activePage == 'products') active @endif">
+                <div class="nav-link">
+                    <i class="nc-icon nc-bag"></i>
+                    <p>{{ __("Products") }}</p>
+                </div>
             </li>
             
             <li class="nav-item @if($activePage == 'typography') active @endif">

@@ -18,4 +18,11 @@ class PageController extends Controller
         }
         return abort(404);
     }
+    public function prod($page)
+    {
+        if (view()->exists("pages.{$page}")) {
+            return view("pages.{$page}");
+        }
+        return abort(404);
+    }
 }

@@ -23,12 +23,16 @@ $s = "";
     <div class="content">
         <div class="container-fluid">
             @if ($s != "")
-              @php
-                    
-              @endphp
-              <div class="row">
-                hi
-              </div>
+              @foreach ($products as $item)
+                @if (str_contains($item->product_name,$s))
+                  <a class="row item" href="#">
+                    <div id="prodname" class="col col-2">{{$item->product_name}}</div>
+                    <div id="desc" class="col col-8">{{$item->product_description}}</div>
+                    <div id="participant" class="col col-2">{{$item->posted_by}}</div>
+                  </a>
+                @endif   
+              @endforeach
+              
             @else
             <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-none">
               <div class="col-md-5 p-lg-5 mx-auto my-5">

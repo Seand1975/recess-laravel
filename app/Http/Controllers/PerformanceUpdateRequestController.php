@@ -14,8 +14,4 @@ class PerformanceUpdateRequestController extends Controller
     {
         return view('perfomance/index');
     }
-    public function deleteRequest()
-    {
-        return view('perfomance/index');
-    }
 }
