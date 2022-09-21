@@ -25,7 +25,7 @@ $s = "";
             @if ($s != "")
               @foreach ($products as $item)
                 @if (str_contains($item->product_name,$s))
-                  <a class="row item" href="#">
+                  <a class="row item" href="{{route('product',[$item->posted_by,$item->product_name])}}">
                     <div id="prodname" class="col col-2">{{$item->product_name}}</div>
                     <div id="desc" class="col col-8">{{$item->product_description}}</div>
                     <div id="participant" class="col col-2">{{$item->posted_by}}</div>

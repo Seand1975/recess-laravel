@@ -54,7 +54,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 Route::group(['middleware' => 'auth'], function () {
 	Route::get('{page}', ['as' => 'page.index', 'uses' => 'App\Http\Controllers\PageController@index']);
-	Route::get('products/{prod}', ['as' => 'prod', 'uses' => 'App\Http\Controllers\PageController@index']);
+	Route::get('products/{participant}/{item}', ['as' => 'product', 'uses' => 'App\Http\Controllers\PageController@prod']);
 });
 
 

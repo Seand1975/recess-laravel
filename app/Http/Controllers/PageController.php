@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Product;
 
 class PageController extends Controller
 {
@@ -18,11 +18,10 @@ class PageController extends Controller
         }
         return abort(404);
     }
-    public function prod($page)
+
+    public function prod($participant,$item)
     {
-        if (view()->exists("pages.{$page}")) {
-            return view("pages.{$page}");
-        }
-        return abort(404);
+        $prod = Product::where('product_name',$item)->where('posted_by',$participant)->get();
+        return view('pages.products',compact('prod'));
     }
 }
