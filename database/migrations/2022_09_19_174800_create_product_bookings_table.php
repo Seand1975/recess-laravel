@@ -14,13 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('product_bookings', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('customer');
-            $table->integer('product_id');
+            $table->increments('booking_id');
+            $table->foreignId('name')->constrained('users');
+            $table->foreignId('product_name')->references('product_name')->on('products');//creates an error
             $table->string('delivery_address');
             $table->integer('quantity_booked');
-            $table->foreign('customer')->references('name')->on('users');
-            $table->foreign('product_id')->references('id')->on('products');
         });
     }
 
