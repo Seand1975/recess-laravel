@@ -17,7 +17,7 @@ Tip 2: you can also add an image using data-image tag
                     <p>{{ __("Home") }}</p>
                 </a>
             </li>
-           
+
             <li class="nav-item @if($activePage == 'user') active @endif">
                 <a class="nav-link" href="{{route('profile.edit')}}">
                     <i class="nc-icon nc-badge"></i>
@@ -30,18 +30,24 @@ Tip 2: you can also add an image using data-image tag
                     <p>{{ __("Admin Dashboard") }}</p>
                 </a>
             </li>
-            
+
             <li class="nav-item @if($activePage == 'products') active @endif">
                 <div class="nav-link">
                     <i class="nc-icon nc-bag"></i>
                     <p>{{ __("Products") }}</p>
                 </div>
             </li>
-            
-            <li class="nav-item @if($activePage == 'typography') active @endif">
-                <a class="nav-link" href="{{route('page.index', 'typography')}}">
+
+            <li class="nav-item @if($activePage == 'booking') active @endif">
+                <a class="nav-link" href="{{route('page.index', 'booking')}}">
                     <i class="nc-icon nc-paper-2"></i>
-                    <p>{{ __("Typography") }}</p>
+                    <p>{{ __("Bookings") }}</p>
+                </a>
+            </li>
+            <li class="nav-item @if($activePage == 'vendor') active @endif">
+                <a class="nav-link" href="{{route('page.index', 'vendor')}}">
+                    <i class="nc-icon nc-cart-simple"></i>
+                    <p>{{ __("Vendor") }}</p>
                 </a>
             </li>
             <li class="nav-item @if($activePage == 'icons') active @endif">
@@ -50,18 +56,8 @@ Tip 2: you can also add an image using data-image tag
                     <p>{{ __("Icons") }}</p>
                 </a>
             </li>
-            <li class="nav-item @if($activePage == 'notifications') active @endif">
-                <a class="nav-link" href="{{route('page.index', 'notifications')}}">
-                    <i class="nc-icon nc-bell-55"></i>
-                    <p>{{ __("Notifications") }}</p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active bg-danger" href="{{route('page.index', 'upgrade')}}">
-                    <i class="nc-icon nc-alien-33"></i>
-                    <p>{{ __("Upgrade to PRO") }}</p>
-                </a>
-            </li>
+
+
         </ul>
     </div>
 </div>
