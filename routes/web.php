@@ -13,30 +13,6 @@ use Illuminate\Support\Facades\Route;
 |*/
 
 
-// Route::get('/', function () {
-//     return view('index');
-// })->name('index');
-
-// Route::get('/search', function () {
-//     return view('search');
-// })->name('search');
-
-// Route::get('/item', function () {
-//     return view('item');
-// })->name('item');
-
-// Route::get('/profile', function () {
-//     return view('profile');
-// })->name('profile');
-
-// Route::get('/purchase', function () {
-//     return view('purchase');
-// })->name('purchase');
-
-// Route::get('/admin', function () {
-//     return view('admin');
-// })->name('admin');
-
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
