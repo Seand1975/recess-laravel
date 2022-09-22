@@ -1,4 +1,4 @@
-<!-- 
+<!--
 =========================================================
  Light Bootstrap Dashboard - v2.0.1
 =========================================================
@@ -33,20 +33,20 @@
     </head>
 
     <body>
-        <div class="wrapper @if (!auth()->check() || request()->route()->getName() == "") wrapper-full-page @endif">
+        <div class="wrapper @if (!auth()->check() || request()->route()->getName() == "") wrapper-full-page @endif" >
 
             @if (auth()->check() && request()->route()->getName() != "")
                 @include('layouts.navbars.sidebar')
             @endif
 
-            <div class="@if (auth()->check() && request()->route()->getName() != "") main-panel @endif">
+            <div class="@if (auth()->check() && request()->route()->getName() != "") main-panel @endif" data-color="purple">
                 @include('layouts.navbars.navbar')
                 @yield('content')
                 @include('layouts.footer.nav')
             </div>
 
         </div>
-       
+
 
 
     </body>
@@ -71,7 +71,7 @@
     @stack('js')
     <script>
       $(document).ready(function () {
-        
+
         $('#facebook').sharrre({
           share: {
             facebook: true

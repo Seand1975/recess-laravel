@@ -86,14 +86,15 @@ div#rev{
 }
 .product-device {
   position: absolute;
-  right: 35.5%;
-  bottom: -30%;
-  width: 320px;
+  left: 55%;
+  top: 30%;
+  width: 300px;
   height: 560px;
   background-color: #a7bacf;
   border-radius: 21px;
   box-shadow: 9px 7px #101e30;
   z-index: -1;
+  transform: rotate(-60deg);
 }
 .product-device::before {
   position: absolute;
@@ -101,7 +102,7 @@ div#rev{
   right: 10px;
   bottom: 10%;
   left: 10px;
-  content: "©";
+  content: "";
   background-color: rgba(255, 255, 255, .1);
   border-radius: 5px;
 }
