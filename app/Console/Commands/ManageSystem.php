@@ -11,14 +11,14 @@ class ManageSystem extends Command
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'manage:system';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'This command updates products and users database tables with values from a file';
 
     /**
      * Execute the console command.
