@@ -14,7 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('participants', function (Blueprint $table) {
-            $table->string('name')->onDelete('cascade')->primary();
+            $table->increments('id');
+            $table->string('name')->onDelete('cascade')->unique();
             $table->mediumText('password');
             $table->date('date_of_birth');
             $table->string('product');
