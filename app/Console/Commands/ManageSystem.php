@@ -32,9 +32,8 @@ class ManageSystem extends Command
     public function handle()
     {
       $path = dirname(__DIR__,4)."\\recess-java\anka.txt";
-      $ankafile = new SplFileObject($path);
-      while (!$ankafile->eof()) {
-        $line = $ankafile->fgets();
+      $ankafile = fopen($path,"r");
+      while (($line = fgets($ankafile))!==false) {
         $work = explode(": ",$line);
         $content = explode(",",$work[1]);//content[e.g name,pass,dob & product for register]: 
         switch ($work[0]) {
@@ -61,9 +60,9 @@ class ManageSystem extends Command
           default:
             info("No command.");
             break;
-        }
+        }//
       }
-      $ankafile = null;
+      fclose($ankafile);
       //also another for the request file*/
       return 0;
     }
