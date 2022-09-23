@@ -33,7 +33,6 @@
   }
   90%{visibility: hidden;}
   100%{
-    visibility: hidden;
     left:90%;
     transform: rotate(405deg);
     background-color: #343a4000;
