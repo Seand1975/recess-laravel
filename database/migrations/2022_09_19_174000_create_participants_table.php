@@ -19,6 +19,7 @@ return new class extends Migration
             $table->mediumText('password');
             $table->date('date_of_birth');
             $table->string('product');
+            $table->timestamps();
         });
     }
 

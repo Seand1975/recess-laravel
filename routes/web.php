@@ -33,5 +33,11 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('products/{participant}/{item}', ['as' => 'product', 'uses' => 'App\Http\Controllers\PageController@prod']);
 	Route::get('bookings/{uname}', ['as' => 'orders', 'uses' => 'App\Http\Controllers\PageController@order']);
 });
+Route::group(['middleware' => 'isAdmin'], function () {
+	//Route::resource('user', 'App\Http\Controllers\UserController', ['except' => ['show']]);
+	//Route::get('profile', ['as' => 'profile.edit', 'uses' => 'App\Http\Controllers\ProfileController@edit']);
+	Route::get('/dashboard', 'App\Http\Controllers\HomeController@dash')->name('dashboard');
+});
+
 
 
