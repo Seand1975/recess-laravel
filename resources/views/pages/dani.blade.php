@@ -124,21 +124,11 @@ div#rev{
   margin-bottom: 10px;
   font-weight: bold;
 }
-#prodname{
-  font-variant: small-caps;
-  background-color: #101e30;
-  color: white;
-}
-#desc{
-  background-color:#a7bacf;
-  color: white;
-}
-#participant{
-  background-color: #343a40;
-  color: white;
-}
 div.item>div.col{
   height: inherit;
   align-content: center;
+}
+#prodname {
+  font-variant: small-caps;
 }
 </style>

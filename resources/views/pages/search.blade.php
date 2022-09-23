@@ -20,19 +20,36 @@ $s = "";
     <button id="clk" type="submit" onclick="show()">
       <div id="rev"><i class="nc-icon nc-zoom-split"></i></div>
     </button>
+    
     <div class="content">
+      
         <div class="container-fluid">
             @if ($s != "")
               @if (count($products)!=0)
-                @foreach ($products as $item)
+              <div class="card">
+                <div class="card-header">
+                  <div class="row">
+                    <div class="col-2"><h5>Product Name</h5></div>
+                    <div class="col-8"><h5>Description</h5></div>
+                    <div class="col-2"><h5>Vendor</h5></div>
+                  </div>
+                </div>
+                <ul class="list-group list-group-flush">
+                  @foreach ($products as $item)
                   @if (str_contains($item->product_name,$s))
-                    <a class="card" href="{{route('product',[$item->posted_by,$item->product_name])}}">
-                      <div id="prodname" class="col col-2">{{$item->product_name}}</div>
-                      <div id="desc" class="col col-8">{{$item->product_description}}</div>
-                      <div id="participant" class="col col-2">{{$item->posted_by}}</div>
-                    </a>
+                    <li class="list-group-item">
+                      <a href="{{route('product',[$item->posted_by,$item->product_name])}}">
+                        <div class="row">
+                          <div id="prodname" class="col-2">{{$item->product_name}}</div>
+                          <div class="col-8">{{$item->product_description}}</div>
+                          <div class="col-2">{{$item->posted_by}}</div>
+                        </div>
+                      </a>
+                    </li>
                   @endif   
                 @endforeach
+                </ul>
+              </div>
               @else
               <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-none">
                 <div class="col-md-5 p-lg-5 mx-auto my-5">
