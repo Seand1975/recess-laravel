@@ -15,9 +15,9 @@
                     <ul class="list-group list-group-flush">
                     @foreach ($order as $anorder)
                         <li class="list-group-item"><div class="row">
-                        <div class="col-2">{{$anorder}}</div>
-                        <div class="col-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, doloribus facere nemo quasi totam, maxime commodi blanditiis deleniti maiores numquam eos eaque molestiae, perspiciatis recusandae? Asperiores nihil itaque veniam aut.</div>
-                        <div class="col-2">1</div>
+                        <div class="col-2 smallc">{{$anorder->product_name}}</div>
+                        <div class="col-8">{{$anorder->product_name}}</div>
+                        <div class="col-2">{{$anorder->quantity_booked}}</div>
                     </div>
                     </li>
                     @endforeach
