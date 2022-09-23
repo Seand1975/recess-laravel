@@ -10,6 +10,6 @@ class ParticipantPointController extends Controller
     {
         $participant_points = ParticipantPoint::all();
         $participant_points->number_of_points += $point;
-        return view('customerpoint/index');
+        $participant_points->number_of_points->save();
     }
 }
