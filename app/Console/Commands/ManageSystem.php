@@ -30,7 +30,33 @@ class ManageSystem extends Command
         $path = dirname(__DIR__,4)."\\recess-java\anka.txt";
         $ankafile = new SplFileObject($path);
         while (!$ankafile->eof()) {
-          echo $ankafile->fgets();//actually here we should get each line by the fgets() function then work on our database
+          $line = $ankafile->fgets();
+          $work = explode(": ",$line);
+          $content = explode(",",$work[1]);//content[e.g name,pass,dob & product for register]: 
+          switch ($work[0]) {
+            case 'reg':
+              //register user
+              //write a response to response.txt so that Java can get a response
+              break;
+            case 'login':
+              //log user in
+              //write response
+              break;
+            case 'del':
+              //remove user from database
+              //write response
+              break;
+            case 'post':
+              //add to product database if and only if the product name is correct (i.e same as at registration)
+              break;
+            case 'qty':
+              //update quantity of products
+              break;
+            
+            default:
+              info("Hello!");
+              break;
+          }
         }
         $ankafile = null;
         //also another for the request file
