@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use app\Models\ParticipantPoint;
+use App\Models\ParticipantPoint;
 
 class ParticipantPointController extends Controller
 {
