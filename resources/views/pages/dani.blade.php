@@ -31,12 +31,16 @@
     color:black;
     transform: rotate(45deg);
   }
+  90%{visibility: hidden;}
   100%{
     visibility: hidden;
     left:90%;
     transform: rotate(405deg);
-    background-color: #343a40;
+    background-color: #343a4000;
     color:white;
+    border-color: #00000000;
+    outline-color: #00000000;
+    box-shadow: none;
   }
 }
 
@@ -61,7 +65,7 @@ button#clk{
   width: 60px;
   height: 60px;
   position: relative;
-  top: -20%;
+  top: -12%;
   left: 40%;
   margin-left: 10px;
   background-attachment: fixed;
