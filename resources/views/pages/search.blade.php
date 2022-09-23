@@ -28,7 +28,7 @@ $s = "";
               @if (count($products)!=0)
               <div class="card">
                 <div class="card-header">
-                  <div class="row">
+                  <div class="row smallc">
                     <div class="col-2"><h5>Product Name</h5></div>
                     <div class="col-8"><h5>Description</h5></div>
                     <div class="col-2"><h5>Vendor</h5></div>
@@ -40,7 +40,7 @@ $s = "";
                     <li class="list-group-item">
                       <a href="{{route('product',[$item->posted_by,$item->product_name])}}">
                         <div class="row">
-                          <div id="prodname" class="col-2">{{$item->product_name}}</div>
+                          <div class="col-2 smallc">{{$item->product_name}}</div>
                           <div class="col-8">{{$item->product_description}}</div>
                           <div class="col-2">{{$item->posted_by}}</div>
                         </div>
