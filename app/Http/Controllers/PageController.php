@@ -26,9 +26,9 @@ class PageController extends Controller
         return view('pages.products',compact('prod'));
     }
     
-    public function order()
+    public function order($uname)
     {
-        $book = ProductBooking::where('name', auth()->user()->name)->get();
-        return view('pages.booking',compact('book'));
+        $booking = ProductBooking::where('name', $uname)->get();
+        return view('pages.booking',['order'=>$booking]);
     }
 }

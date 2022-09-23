@@ -13,12 +13,14 @@
                         </div>
                     </div>
                     <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><div class="row">
-                        <div class="col-2">Shoes</div>
+                    @foreach ($order as $anorder)
+                        <li class="list-group-item"><div class="row">
+                        <div class="col-2">{{$anorder}}</div>
                         <div class="col-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, doloribus facere nemo quasi totam, maxime commodi blanditiis deleniti maiores numquam eos eaque molestiae, perspiciatis recusandae? Asperiores nihil itaque veniam aut.</div>
                         <div class="col-2">1</div>
                     </div>
                     </li>
+                    @endforeach
                     <li class="list-group-item">
                         <div class="row">
                             <div class="col-2">Jacket</div>

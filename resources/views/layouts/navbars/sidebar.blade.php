@@ -39,7 +39,7 @@ Tip 2: you can also add an image using data-image tag
             </li>
 
             <li class="nav-item @if($activePage == 'booking') active @endif">
-                <a class="nav-link" href="{{route('order', 'booking')}}">
+                <a class="nav-link" href="{{route('orders',auth()->user()->name)}}">
                     <i class="nc-icon nc-paper-2"></i>
                     <p>{{ __("Bookings") }}</p>
                 </a>
