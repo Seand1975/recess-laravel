@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\ProductBooking;
 
 class PageController extends Controller
 {
@@ -23,5 +24,11 @@ class PageController extends Controller
     {
         $prod = Product::where('product_name',$item)->where('posted_by',$participant)->get();
         return view('pages.products',compact('prod'));
+    }
+    
+    public function order($uname)
+    {
+        $booking = ProductBooking::where('name', $uname)->get();
+        return view('pages.booking',['order'=>$booking]);
     }
 }

@@ -1,12 +1,13 @@
 <script type="text/javascript">
-    let hov = false;
+    let click = false;
     function show() {
-        if (!hov) {
+        if (!click) {
             let input = document.getElementById('text');
             let btn = document.getElementById('clk');
+            let divn = document.getElementById('division');
             input.className += " inp";
             btn.className += " move";
-            hov = true;
+            click = true;
         }
     }
 </script>
@@ -18,29 +19,30 @@
     visibility: hidden;
   }
   100% {
-    width: 80%;
+    width: 95%;
     visibility: visible;
   }
 }
 @keyframes posn {
   0%{
+    visibility: visible;
     left:40%;
     background-color: white;
     color:black;
     transform: rotate(45deg);
   }
-  33%{
-    transform: rotate(70deg);
-  }
-  67%{
-    transform: rotate(20deg);
-  }
+  90%{visibility: hidden;}
   100%{
-    left:4%;
-    background-color: #343a40;
+    left:90%;
+    transform: rotate(405deg);
+    background-color: #343a4000;
     color:white;
+    border-color: #00000000;
+    outline-color: #00000000;
+    box-shadow: none;
   }
 }
+
 .search{
   margin: 10px;
   width: 2%;
@@ -62,7 +64,7 @@ button#clk{
   width: 60px;
   height: 60px;
   position: relative;
-  top: 3%;
+  top: -12%;
   left: 40%;
   margin-left: 10px;
   background-attachment: fixed;
@@ -122,21 +124,11 @@ div#rev{
   margin-bottom: 10px;
   font-weight: bold;
 }
-#prodname{
-  font-variant: small-caps;
-  background-color: #101e30;
-  color: white;
-}
-#desc{
-  background-color:#a7bacf;
-  color: white;
-}
-#participant{
-  background-color: #343a40;
-  color: white;
-}
 div.item>div.col{
   height: inherit;
   align-content: center;
+}
+.smallc {
+  font-variant: small-caps;
 }
 </style>
