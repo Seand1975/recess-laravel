@@ -27,6 +27,13 @@ class ManageSystem extends Command
      */
     public function handle()
     {
+        $path = dirname(__DIR__,4)."\\recess-java\anka.txt";
+        $ankafile = new SplFileObject($path);
+        while (!$ankafile->eof()) {
+          echo $ankafile->fgets();//actually here we should get each line by the fgets() function then work on our database
+        }
+        $ankafile = null;
+        //also another for the request file
         return 0;
     }
 }
