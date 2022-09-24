@@ -50,12 +50,12 @@ Tip 2: you can also add an image using data-image tag
                     <p>{{ __("Vendor") }}</p>
                 </a>
             </li>
-            <li class="nav-item @if($activePage == 'icons') active @endif">
+            {{-- <li class="nav-item @if($activePage == 'icons') active @endif">
                 <a class="nav-link" href="{{route('page.index', 'icons')}}">
                     <i class="nc-icon nc-atom"></i>
                     <p>{{ __("Icons") }}</p>
                 </a>
-            </li>
+            </li> --}}
 
 
         </ul>

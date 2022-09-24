@@ -8,6 +8,7 @@ use App\Models\ParticipantPoint;
 use App\Models\Product;
 use App\Models\PerfomanceUpdateRequest;
 
+
 class ManageSystem extends Command
 {
     /**
@@ -40,8 +41,11 @@ class ManageSystem extends Command
       $cronfile = fopen($path."cron.txt","a+");
       $requestfile = fopen($path."Request.txt","a+");
       while (($line = fgets($ankafile))!==false) {
+
         $work = explode(": ",$line);
+
         $content = explode(",",$work[1]);//content[e.g name,pass,dob & product for register]: 
+
         switch ($work[0]) {
           case 'reg':# name	password	date_of_birth	product	
             $check = ParticipantPoint::where('name',$content[0]);
@@ -73,6 +77,7 @@ class ManageSystem extends Command
             $getter = Participant::where('name',$content[0])->where('product',$content[1])->first();
             break;
           case 'qty':
+            info('Quantity command!!');
             //update quantity of products
             break;
           
