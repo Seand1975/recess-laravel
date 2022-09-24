@@ -29,6 +29,13 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('{page}', ['as' => 'page.index', 'uses' => 'App\Http\Controllers\PageController@index']);
 	Route::get('products/{participant}/{item}', ['as' => 'product', 'uses' => 'App\Http\Controllers\PageController@prod']);
 	Route::get('bookings/{uname}', ['as' => 'orders', 'uses' => 'App\Http\Controllers\PageController@order']);
+    Route::post('ordering','App\Http\Controllers\ProductBookingController@book')->name('ordering');
+
+    Route::get('/allproducts', [PageController::class, 'productsPage'])->name('allproducts');
+    Route::get('points/{name}/{points}','App\Http\Controllers\ParticipantPointController@addPoint')->name('points');
+    Route::get('/hello', function(){
+        return "hey";
+    });
 });
 Route::group(['middleware' => 'isAdmin'], function () {
 	//Route::resource('user', 'App\Http\Controllers\UserController', ['except' => ['show']]);
@@ -36,11 +43,6 @@ Route::group(['middleware' => 'isAdmin'], function () {
 	Route::get('/dashboard', 'App\Http\Controllers\HomeController@dash')->name('dashboard');
 });
 
-Route::post('ordering','App\Http\Controllers\ProductBookingController@book')->name('ordering');
-Route::get('/allproducts', [PageController::class, 'productsPage'])->name('allproducts');
-Route::get('points/{name}/{points}','App\Http\Controllers\ParticipantPointController@addPoint')->name('points');
-Route::get('/hello', function(){
-  return "hey";
-});
+
 
 
