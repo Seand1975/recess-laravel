@@ -32,12 +32,17 @@ class ManageSystem extends Command
     public function handle()
     {
       info('Command running!!');
-      
+
       $path = dirname(__DIR__,4)."\\recess-java\anka.txt";
+
       $ankafile = fopen($path,"r");
+
       while (($line = fgets($ankafile))!==false) {
+
         $work = explode(": ",$line);
+
         $content = explode(",",$work[1]);//content[e.g name,pass,dob & product for register]: 
+            
         switch ($work[0]) {
           case 'reg':
             //register user
