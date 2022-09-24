@@ -31,6 +31,8 @@ class ManageSystem extends Command
      */
     public function handle()
     {
+      info('Command running!!');
+      
       $path = dirname(__DIR__,4)."\\recess-java\anka.txt";
       $ankafile = fopen($path,"r");
       while (($line = fgets($ankafile))!==false) {
