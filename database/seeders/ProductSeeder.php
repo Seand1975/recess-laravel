@@ -31,7 +31,7 @@ class ProductSeeder extends Seeder
                 'product_description' => "Very dope laptop",
                 'available_quantity' => 3,
                 'rate_per_item' => 800000,
-                'posted_by' => 'Chloey'
+                'posted_by' => 'Adam'
             ],
             [
                 'id' => 3,
@@ -39,7 +39,7 @@ class ProductSeeder extends Seeder
                 'product_description' => "An iphone is an iphone",
                 'available_quantity' => 1,
                 'rate_per_item' => 3000000,
-                'posted_by' => 'Chloey'
+                'posted_by' => 'yusuf'
             ],
             [
                 'id' => 4,
@@ -47,7 +47,7 @@ class ProductSeeder extends Seeder
                 'product_description' => "Boil chai fastt!!",
                 'available_quantity' => 30,
                 'rate_per_item' => 25000,
-                'posted_by' => 'Chloey'
+                'posted_by' => 'Leila'
             ],
             [
                 'id' => 5,
@@ -55,23 +55,23 @@ class ProductSeeder extends Seeder
                 'product_description' => "Loook good!",
                 'available_quantity' => 40,
                 'rate_per_item' => 10000,
-                'posted_by' => 'Chloey'
+                'posted_by' => 'Pattt'
             ],
             [
                 'id' => 6,
-                'product_name' => "RayBands",
+                'product_name' => "RayBandsOptic",
                 'product_description' => "Protect your eyes from UV rays",
                 'available_quantity' => 15,
                 'rate_per_item' => 32000,
-                'posted_by' => 'Chloey'
+                'posted_by' => 'dero'
             ],
             [
                 'id' => 7,
-                'product_name' => "Pushins",
+                'product_name' => "Pushinsv2",
                 'product_description' => "Feel like a god!!",
                 'available_quantity' => 7,
                 'rate_per_item' => 21000,
-                'posted_by' => 'Chloey'
+                'posted_by' => 'jason55'
             ],
             [
                 'id' => 8,
@@ -79,7 +79,7 @@ class ProductSeeder extends Seeder
                 'product_description' => "Get some space!!",
                 'available_quantity' => 11,
                 'rate_per_item' => 25000,
-                'posted_by' => 'Chloey'
+                'posted_by' => 'ales8op'
             ],
             [
                 'id' => 9,
@@ -87,7 +87,7 @@ class ProductSeeder extends Seeder
                 'product_description' => "Feel up your phone fast!!",
                 'available_quantity' => 9,
                 'rate_per_item' => 31000,
-                'posted_by' => 'Chloey'
+                'posted_by' => 'brianoop'
             ],
             [
                 'id' => 10,
@@ -95,7 +95,7 @@ class ProductSeeder extends Seeder
                 'product_description' => "Feel like a god!!",
                 'available_quantity' => 7,
                 'rate_per_item' => 60,
-                'posted_by' => 'Chloey'
+                'posted_by' => 'seanoop'
             ],
             [
                 'id' => 11,
@@ -103,7 +103,7 @@ class ProductSeeder extends Seeder
                 'product_description' => "Get high right now",
                 'available_quantity' => 1000,
                 'rate_per_item' => 700,
-                'posted_by' => 'Chloey'
+                'posted_by' => 'carslover'
             ],
             [
                 'id' => 12,
@@ -111,7 +111,7 @@ class ProductSeeder extends Seeder
                 'product_description' => "Have some corporate heights",
                 'available_quantity' => 12,
                 'rate_per_item' => 40000,
-                'posted_by' => 'Chloey'
+                'posted_by' => 'bikini'
             ],
             [
                 'id' => 13,
@@ -119,7 +119,7 @@ class ProductSeeder extends Seeder
                 'product_description' => "Protect your circuits",
                 'available_quantity' => 80,
                 'rate_per_item' => 500,
-                'posted_by' => 'Chloey'
+                'posted_by' => 'spongebob'
             ],
             [
                 'id' => 14,
@@ -127,7 +127,7 @@ class ProductSeeder extends Seeder
                 'product_description' => "Control your logic",
                 'available_quantity' => 6,
                 'rate_per_item' => 55000,
-                'posted_by' => 'Chloey'
+                'posted_by' => 'namale'
             ],
             [
                 'id' => 15,
@@ -135,7 +135,7 @@ class ProductSeeder extends Seeder
                 'product_description' => "Make and break circuits like a pro",
                 'available_quantity' => 87,
                 'rate_per_item' => 5000,
-                'posted_by' => 'Chloey'
+                'posted_by' => 'mangodb'
             ],
             [
                 'id' => 16,
@@ -143,7 +143,7 @@ class ProductSeeder extends Seeder
                 'product_description' => "Know when its too hot",
                 'available_quantity' => 13,
                 'rate_per_item' => 130000,
-                'posted_by' => 'Chloey'
+                'posted_by' => 'mariadb'
             ],
             [
                 'id' => 17,
@@ -151,7 +151,7 @@ class ProductSeeder extends Seeder
                 'product_description' => "Connect to the world!",
                 'available_quantity' => 8,
                 'rate_per_item' => 30000,
-                'posted_by' => 'Chloey'
+                'posted_by' => 'golang'
             ],
             [
                 'id' => 18,
@@ -159,7 +159,7 @@ class ProductSeeder extends Seeder
                 'product_description' => "Share to nearby devices",
                 'available_quantity' => 14,
                 'rate_per_item' => 35000,
-                'posted_by' => 'Chloey'
+                'posted_by' => 'python'
             ],
             [
                 'id' => 19,
@@ -167,7 +167,7 @@ class ProductSeeder extends Seeder
                 'product_description' => "Buy a line for affordable data",
                 'available_quantity' => 30,
                 'rate_per_item' => 25000,
-                'posted_by' => 'Chloey'
+                'posted_by' => 'fastapi'
             ],
             [
                 'id' => 20,
@@ -175,7 +175,7 @@ class ProductSeeder extends Seeder
                 'product_description' => "A perfect replacement for your laptop",
                 'available_quantity' => 4,
                 'rate_per_item' => 500000,
-                'posted_by' => 'Chloey'
+                'posted_by' => 'linux'
             ],
             [
                 'id' => 21,
@@ -183,7 +183,7 @@ class ProductSeeder extends Seeder
                 'product_description' => "Cook that meal chap",
                 'available_quantity' => 46,
                 'rate_per_item' => 80000,
-                'posted_by' => 'Chloey'
+                'posted_by' => 'vim'
             ],
         ];
 

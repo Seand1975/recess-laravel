@@ -6,6 +6,8 @@ $s = "";
     } catch (\Throwable $th) {
         $s="";
     }
+use    App\Models\ParticipantPoint;
+$best = ParticipantPoint::orderBy('number_of_points','desc')->first();
 @endphp
 
 @include('pages.dani')
@@ -64,7 +66,7 @@ $s = "";
 
             @else
             <div class="card mx-auto">
-                <div class="card-header">Best guy:</div>
+                Best Participant: {{$best->name}} with {{$best->number_of_points}} points.
             </div>
             <div class="position-relative overflow-hidden p-3 p-md-5 text-center bg-none" style="margin-top: -5%;">
               <div class="col-md-5 p-lg-5 mx-auto ">

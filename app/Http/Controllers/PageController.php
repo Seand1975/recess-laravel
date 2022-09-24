@@ -34,10 +34,6 @@ class PageController extends Controller
 
     public function productsPage()
     {
-        $dataProducts = Product::get();
-
-        return $dataProducts;
-
-        return view('pages.allproducts',compact('dataProducts'));
+        return view('pages.allproducts');
     }
 }

@@ -20,7 +20,6 @@ return new class extends Migration
             $table->integer('available_quantity');
             $table->integer('rate_per_item');
             $table->string('posted_by');
-            $table->foreign('posted_by')->references('name')->on('participants');
             $table->timestamps();
         });
     }

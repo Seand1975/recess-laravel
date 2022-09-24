@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
             UsersTableSeeder::class,
             ParticipantSeeder::class,
             ProductSeeder::class,
+            PointsSeeder::class,
         ]);
     }
 }
