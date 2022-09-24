@@ -43,17 +43,21 @@ class ManageSystem extends Command
             info('Register command!!');
             break;
           case 'login':
+            info('Login command!!');
             //log user in
             //write response
             break;
           case 'del':
+            info('Delete command!!');
             //remove user from database
             //write response
             break;
           case 'post':
+            info('Post command!!');
             //add to product database if and only if the product name is correct (i.e same as at registration)
             break;
           case 'qty':
+            info('Quantity command!!');
             //update quantity of products
             break;
           
