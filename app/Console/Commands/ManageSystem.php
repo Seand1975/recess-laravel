@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\ProductBooking;
 use App\Models\Product;
 use App\Models\PerfomanceUpdateRequest;
+use Illumnate\Support\Facades\DB;
 
 class ManageSystem extends Command
 {
@@ -42,7 +43,7 @@ class ManageSystem extends Command
         $work = explode(": ",$line);
 
         $content = explode(",",$work[1]);//content[e.g name,pass,dob & product for register]: 
-            
+
         switch ($work[0]) {
           case 'reg':
             //register user
