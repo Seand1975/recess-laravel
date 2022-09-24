@@ -22,13 +22,13 @@ class PageController extends Controller
 
     public function prod($participant,$item)
     {
-        $prod = Product::where('product_name',$item)->where('posted_by',$participant)->get();
+        $prod = Product::where('product_name',$item)->where('posted_by',$participant)->first();
         return view('pages.products',compact('prod'));
     }
     
-    public function order()
+    public function order($uname)
     {
-        $book = ProductBooking::where('name', auth()->user()->name)->get();
-        return view('pages.booking',compact('book'));
+        $booking = ProductBooking::where('name', $uname)->get();
+        return view('pages.booking',['order'=>$booking]);
     }
 }

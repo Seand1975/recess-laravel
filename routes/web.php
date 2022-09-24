@@ -31,7 +31,16 @@ Route::group(['middleware' => 'auth'], function () {
 Route::group(['middleware' => 'auth'], function () {
 	Route::get('{page}', ['as' => 'page.index', 'uses' => 'App\Http\Controllers\PageController@index']);
 	Route::get('products/{participant}/{item}', ['as' => 'product', 'uses' => 'App\Http\Controllers\PageController@prod']);
-	Route::get('booking', ['as' => 'order', 'uses' => 'App\Http\Controllers\PageController@order']);
+	Route::get('bookings/{uname}', ['as' => 'orders', 'uses' => 'App\Http\Controllers\PageController@order']);
 });
+Route::group(['middleware' => 'isAdmin'], function () {
+	//Route::resource('user', 'App\Http\Controllers\UserController', ['except' => ['show']]);
+	//Route::get('profile', ['as' => 'profile.edit', 'uses' => 'App\Http\Controllers\ProfileController@edit']);
+	Route::get('/dashboard', 'App\Http\Controllers\HomeController@dash')->name('dashboard');
+});
+
+Route::post('ordering','App\Http\Controllers\ProductBookingController@book')->name('ordering');
+Route::get('points/{name}/{qty}','App\Http\Controllers\ParticipantPointController@addPoint')->name('points');
+
 
 

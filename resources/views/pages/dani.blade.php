@@ -128,7 +128,7 @@ div.item>div.col{
   height: inherit;
   align-content: center;
 }
-#prodname {
+.smallc {
   font-variant: small-caps;
 }
 </style>
