@@ -31,12 +31,14 @@ Tip 2: you can also add an image using data-image tag
                 </a>
             </li>
 
-            <li class="nav-item @if($activePage == 'products') active @endif">
+            @if ($activePage == 'product')
+            <li class="nav-item active">
                 <div class="nav-link">
                     <i class="nc-icon nc-bag"></i>
-                    <p>{{ __("Products") }}</p>
+                    <p>{{ __("Product") }}</p>
                 </div>
             </li>
+            @endif
 
             <li class="nav-item @if($activePage == 'booking') active @endif">
                 <a class="nav-link" href="{{route('orders',auth()->user()->name)}}">
