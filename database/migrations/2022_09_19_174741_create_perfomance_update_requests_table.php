@@ -21,6 +21,7 @@ return new class extends Migration
             $table->dateTime('request_response_time');
             $table->dateTime('request_response_seen');
             $table->foreign('name')->references('name')->on('participants');
+            $table->timestamps();
         });
     }
 

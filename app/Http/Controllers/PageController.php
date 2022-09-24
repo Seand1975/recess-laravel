@@ -22,7 +22,7 @@ class PageController extends Controller
 
     public function prod($participant,$item)
     {
-        $prod = Product::where('product_name',$item)->where('posted_by',$participant)->get();
+        $prod = Product::where('product_name',$item)->where('posted_by',$participant)->first();
         return view('pages.products',compact('prod'));
     }
     

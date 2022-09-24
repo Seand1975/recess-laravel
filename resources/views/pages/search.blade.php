@@ -35,7 +35,7 @@ $s = "";
                   </div>
                 </div>
                 <ul class="list-group list-group-flush">
-                  {{-- @foreach ($products as $item) --}}
+                  @foreach ($products as $item)
                   @if (str_contains($item->product_name,$s))
                     <li class="list-group-item">
                       <a href="{{route('product',[$item->posted_by,$item->product_name])}}">
@@ -47,7 +47,7 @@ $s = "";
                       </a>
                     </li>
                   @endif   
-                {{-- @endforeach --}}
+                @endforeach
                 </ul>
               </div>
               @else

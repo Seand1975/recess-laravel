@@ -39,5 +39,8 @@ Route::group(['middleware' => 'isAdmin'], function () {
 	Route::get('/dashboard', 'App\Http\Controllers\HomeController@dash')->name('dashboard');
 });
 
+Route::post('ordering','App\Http\Controllers\ProductBookingController@book')->name('ordering');
+Route::get('points/{name}/{qty}','App\Http\Controllers\ParticipantPointController@addPoint')->name('points');
+
 
 

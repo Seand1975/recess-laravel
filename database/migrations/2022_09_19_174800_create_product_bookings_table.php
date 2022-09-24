@@ -21,6 +21,7 @@ return new class extends Migration
             $table->integer('quantity_booked');
             $table->string('product_name');
             $table->foreign('product_name')->references('product_name')->on('products');
+            $table->timestamps();
         });
     }
 

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->integer('number_of_points');
             $table->foreign('name')->references('name')->on('participants');
+            $table->timestamps();
         });
     }
 
