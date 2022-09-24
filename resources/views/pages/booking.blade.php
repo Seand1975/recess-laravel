@@ -25,7 +25,7 @@
                             <div class="col-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, doloribus facere nemo quasi totam, maxime commodi blanditiis deleniti maiores numquam eos eaque molestiae, perspiciatis recusandae? Asperiores nihil itaque veniam aut.</div>
                             <div class="col-2">3</div>
                         </div>
-                </li>
+                    </li>
                     <li class="list-group-item">
                         <div class="row">
                             <div class="col-2">Watch</div>
