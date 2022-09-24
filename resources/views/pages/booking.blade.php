@@ -29,25 +29,8 @@
                         <div class="col-2">{{$anorder->quantity_booked}}</div>
                     </div>
                     </li>
-<<<<<<< HEAD
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-2">Jacket</div>
-                            <div class="col-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, doloribus facere nemo quasi totam, maxime commodi blanditiis deleniti maiores numquam eos eaque molestiae, perspiciatis recusandae? Asperiores nihil itaque veniam aut.</div>
-                            <div class="col-2">3</div>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-2">Watch</div>
-                            <div class="col-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, doloribus facere nemo quasi totam, maxime commodi blanditiis deleniti maiores numquam eos eaque molestiae, perspiciatis recusandae? Asperiores nihil itaque veniam aut.</div>
-                            <div class="col-2">2</div>
-                        </div>
-                    </li>
-=======
                     @endforeach
-                    
->>>>>>> dbe6f0934de150902450ef3291568f556d545e93
+
                     </ul>
               </div>
         </div>

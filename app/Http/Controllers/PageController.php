@@ -25,10 +25,19 @@ class PageController extends Controller
         $prod = Product::where('product_name',$item)->where('posted_by',$participant)->first();
         return view('pages.products',compact('prod'));
     }
-    
+
     public function order($uname)
     {
         $booking = ProductBooking::where('name', $uname)->get();
         return view('pages.booking',['order'=>$booking]);
+    }
+
+    public function productsPage()
+    {
+        $dataProducts = Product::get();
+
+        return $dataProducts;
+
+        return view('pages.allproducts',compact('dataProducts'));
     }
 }

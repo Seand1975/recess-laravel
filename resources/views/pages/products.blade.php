@@ -21,8 +21,8 @@
                 <h4 class="price">current price: <span>${{$prod->rate_per_item}}</span></h4>
                 <h4 class="price">In stock: <span>{{$prod->available_quantity}}</span></h4>
                 <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p>
-                
-                
+
+
             </div>
         </div>
         <h4>Order this item:</h4>

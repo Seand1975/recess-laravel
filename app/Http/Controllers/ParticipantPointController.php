@@ -3,16 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Models\ParticipantPoint;
+use App\Models\ProductBooking;
 use Redirect;
 
 class ParticipantPointController extends Controller
 {
-    public function addPoint ($name,$qty)
+    public function addPoint ($name,$points)
     {
-        $points = 1*$qty;
-        $participant_points = ParticipantPoint::where('name',$name)->get();
-        $participant_points[0]->number_of_points += $points;
-        $participant_points[0]->save();
+        $point = new ParticipantPoint;
+        $point->name = $name;
+        $point->number_of_points = $points;
+        $point->save();
 
         return Redirect::route('orders',[auth()->user()->name])->with('status','Booking made successfully!');
     }

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\PageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,7 +13,6 @@ use Illuminate\Support\Facades\Route;
 |*/
 
 
-Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Auth::routes();
@@ -26,9 +25,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'App\Http\Controllers\ProfileController@edit']);
 	Route::patch('profile', ['as' => 'profile.update', 'uses' => 'App\Http\Controllers\ProfileController@update']);
 	Route::patch('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
-});
 
-Route::group(['middleware' => 'auth'], function () {
 	Route::get('{page}', ['as' => 'page.index', 'uses' => 'App\Http\Controllers\PageController@index']);
 	Route::get('products/{participant}/{item}', ['as' => 'product', 'uses' => 'App\Http\Controllers\PageController@prod']);
 	Route::get('bookings/{uname}', ['as' => 'orders', 'uses' => 'App\Http\Controllers\PageController@order']);
@@ -40,7 +37,10 @@ Route::group(['middleware' => 'isAdmin'], function () {
 });
 
 Route::post('ordering','App\Http\Controllers\ProductBookingController@book')->name('ordering');
-Route::get('points/{name}/{qty}','App\Http\Controllers\ParticipantPointController@addPoint')->name('points');
-
+Route::get('/allproducts', [PageController::class, 'productsPage'])->name('allproducts');
+Route::get('points/{name}/{points}','App\Http\Controllers\ParticipantPointController@addPoint')->name('points');
+Route::get('/hello', function(){
+  return "hey";
+});
 
 

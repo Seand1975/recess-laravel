@@ -64,7 +64,7 @@ button#clk{
   width: 60px;
   height: 60px;
   position: relative;
-  top: -12%;
+  top: -9%;
   left: 40%;
   margin-left: 10px;
   background-attachment: fixed;
