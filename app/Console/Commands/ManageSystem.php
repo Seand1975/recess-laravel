@@ -48,8 +48,8 @@ class ManageSystem extends Command
 
         switch ($work[0]) {
           case 'reg':# name	password	date_of_birth	product	
-            $check = ParticipantPoint::where('name',$content[0]);
-            if (count($check)==0) {
+            $check = ParticipantPoint::where('name',$content[0])->first();
+            if ($check->name != $content[0]) {
               $participant_->name = $content[0];
               $participant_->password = $content[1];
               $participant_->date_of_birth = $content[2];
@@ -62,19 +62,27 @@ class ManageSystem extends Command
             }
             break;
           case 'login':# name	password
-            $check = Participant::where('name',$content[0])->where('password',$content[1]);
-            if (count($check)!=0) {
+            $check = Participant::where('name',$content[0])->where('password',$content[1])->first();
+            if ($check->name == $content[0] && $check->password == $content[1]) {
               fwrite($cronfile,"session:".$content[0].",".$content[3]);
               fwrite($cronfile,"success:Logged in successfully!");
             }
             break;
           case 'del':# user
-            $del = Participant::where('name',$content[0]);
-            $del->delete();
+            $del = Participant::where('name',$content[0])->first();
+            $del->destroy();
             break;
           case 'post':# add to product database if and only if the product name is correct (i.e same as at registration)
             # sessname name desc price
+            # product_name product_description available_quantity rate_per_item posted_by created_at updated_at
             $getter = Participant::where('name',$content[0])->where('product',$content[1])->first();
+            if ($getter->product == $content[1]) {
+              $product_->product_name = $content[1];
+              $product_->product_description = implode(" ",explode("-",$content[2]));
+              $product_->available_quantity = 1;
+              $product_->rate_per_item = $content[3];
+              $product_->save();
+            }
             break;
           case 'qty':
             info('Quantity command!!');
@@ -84,8 +92,8 @@ class ManageSystem extends Command
           default:
             info("No command.");
             break;
-        }//
-      }
+        }
+      }//*/
       fclose($ankafile);
 
       while (($line = fgets($requestfile))!==false) {
@@ -115,7 +123,7 @@ class ManageSystem extends Command
             info("No request.");
             break;
         }
-      }
+      }//*/
       fclose($requestfile);
 
       return 0;
